@@ -62,8 +62,6 @@ export class UserFormComponent implements OnInit {
             result = this._userService.addUser(this.user)
             
 		result.subscribe(x => {
-            // Ideally, here we'd want:
-            // this.form.markAsPristine();
             this._router.navigate(['users']);
         });
 	}
