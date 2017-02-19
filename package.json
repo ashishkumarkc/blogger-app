@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "uglify:scripts":"@for %f in (dist/*.js) do @uglifyjs dist/%f --screw-ie8 --compress --mangle --output dist/%f",
     "build:prod":"@echo Building files . . . && @ng build --prod --aot --no-sourcemap && @cd dist && @echo Compressing files . . . && @npm run uglify:scripts",
     "install:ts-underscore":"@cd src && @typings install dt~underscore --global --save && @cd.."
   },
