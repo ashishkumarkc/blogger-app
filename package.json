@@ -9,8 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod":"ng build --prod --aot --no-sourcemap",
-    "install:ts-underscore":"cd src && typings install dt~underscore --global --save && cd.."
+    "build:prod":"@echo Building files . . . && @ng build --prod --aot --no-sourcemap && @cd dist && @echo Compressing files . . . && @npm run uglify:scripts",
+    "install:ts-underscore":"@cd src && @typings install dt~underscore --global --save && @cd.."
   },
   "private": true,
   "dependencies": {
