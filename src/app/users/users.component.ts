@@ -7,13 +7,18 @@ import { UserService }       from './user.service';
 })
 export class UsersComponent implements OnInit {
     users: any[];
+	usersLoading;
     
     constructor(private _service: UserService){
 	}
 
 	ngOnInit(){
+		this.usersLoading=true;
 		this._service.getUsers()
-			.subscribe(users => this.users = users);
+			.subscribe(users => {
+				this.users = users;
+				this.usersLoading=false;
+			});
 	} 
     
     deleteUser(user){

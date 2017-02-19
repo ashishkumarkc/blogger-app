@@ -6,6 +6,8 @@ import { FormsModule,
 import { RouterModule }        from '@angular/router';
 import { HttpModule }          from '@angular/http';
 
+import { SharedModule }        from '../shared/shared.module';
+
 import { User }                from './user';
 import { UserFormComponent }   from './user-form.component';
 import { UsersComponent }      from './users.component';
@@ -19,7 +21,8 @@ import { PreventUnsavedChangesGuard } from '../prevent-unsaved-changes-guard.ser
         FormsModule,
         ReactiveFormsModule,
         RouterModule,
-        HttpModule
+        HttpModule,
+		SharedModule
     ],
     declarations: [
         UserFormComponent, 

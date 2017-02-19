@@ -1,5 +1,6 @@
 <h1>{{ title }}</h1>
-<div class="row">
+<spinner [visible]="userDetailsLoading"></spinner>
+<div *ngIf="!userDetailsLoading" class="row">
     <div class="col-md-6 well">
         <form [formGroup]="form" (ngSubmit)="save()">
             <fieldset>

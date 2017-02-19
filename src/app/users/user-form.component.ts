@@ -13,6 +13,7 @@ export class UserFormComponent implements OnInit {
 	form: FormGroup;
     title: string;
     user = new User();
+	userDetailsLoading;
 
 	constructor(
         fb: FormBuilder,
@@ -41,10 +42,13 @@ export class UserFormComponent implements OnInit {
         
         if (!id)
 			return;
-            
+        this.userDetailsLoading=true;    
         this._userService.getUser(id)
 			.subscribe(
-                user => this.user = user,
+                user => {
+					this.user = user;
+					this.userDetailsLoading=false;
+				},
                 response => {
                     if (response.status == 404) {
                         this._router.navigate(['NotFound']);
