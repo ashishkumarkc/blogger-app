@@ -1,7 +1,16 @@
 <!doctype html>
 <html>
 <head>
-	<base href="https://ashishkumarkc.github.io/blogger-app/">
+	<script type="text/javascript">
+	document.open("text/html","replace");
+	if((""+window.top.location.href).indexOf("ashishkumarkc.github.io/blogger-app")!==-1){
+		document.write("<ba"+"se href=\"https://ashishkumarkc.github.io/blogger-app/\" />");
+	}else{
+		document.write("<ba"+"se href=\"http://localhost:4200/\" />");
+	}
+	document.close();
+	</script>
+	
 	<meta charset="utf-8">
 	<title>Blogger App</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">    
