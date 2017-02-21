@@ -9,9 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "uglify:scripts":"@for %f in (dist/*.js) do @uglifyjs dist/%f --screw-ie8 --compress --mangle --output dist/%f",
-    "build:prod":"@echo Building files . . . && @ng build --prod --aot --no-sourcemap && @echo Compressing files . . . && @npm run uglify:scripts",
-    "install:ts-underscore":"@cd src && @typings install dt~underscore --global --save && @cd.."
+    "uglify:scripts": "@for %f in (dist/*.js) do @uglifyjs dist/%f --screw-ie8 --compress --mangle --output dist/%f",
+    "build:prod": "@echo Building files . . . && @ng build --prod --aot --no-sourcemap && @echo Compressing files . . . && @npm run uglify:scripts",
+    "install:ts-underscore": "@cd src && @typings install dt~underscore --global --save && @cd.."
   },
   "private": true,
   "dependencies": {
@@ -23,11 +23,11 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "bootstrap": "^3.3.6",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "underscore": "^1.8.3",
-    "zone.js": "^0.7.6",
-	"bootstrap": "^3.3.6"
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-beta.32.3",
