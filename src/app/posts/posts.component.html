@@ -27,7 +27,7 @@
                 <div class="media" *ngFor="let comment of currentPost.comments, let i = index">
                     <div class="media-left">
                         <a href="#">
-                            <img class="media-object thumbnail" src="assets/pics/p0{{i+1}}.jpg" alt="...">
+                            <img class="media-object thumbnail" src="assets/pics/p0{{((userPicIdx+i)%8)+1}}.jpg" alt="...">
                         </a>
                     </div>
                     <div class="media-body">

@@ -27,6 +27,7 @@ export class PostsComponent implements OnInit {
     commentsLoading;
     currentPost;
     pageSize = 10;
+	userPicIdx;
     
     constructor(
         private _postService: PostService,
@@ -67,8 +68,10 @@ export class PostsComponent implements OnInit {
         this.commentsLoading = true;
         this._postService.getComments(post.id)
 			.subscribe(
-                comments => 
-                    this.currentPost.comments = comments,
+                comments => {					
+						this.userPicIdx = parseInt(""+Math.random()*121,10);
+						this.currentPost.comments = comments;
+					},
                 null,
                 () => this.commentsLoading = false); 
     } 
