@@ -12,7 +12,7 @@
     "uglify:scripts": "@for %f in (dist/*.js) do @uglifyjs dist/%f --screw-ie8 --compress --mangle --output dist/%f",
     "build:prod": "@cls && @echo Building files . . . && @ng build --prod --aot --no-sourcemap && @echo Compressing files . . . && @npm run uglify:scripts && npm run create:files",
     "install:ts-underscore": "@cd src && @typings install dt~underscore --global --save && @cd..",
-	"create:files":"@echo Creating new files . . . && copy /b \"dist\\index.html\" /b \"dist\\404.html\">nul && @cls && @echo BUILD COMPLETED"
+    "create:files":"@echo Creating new files . . . && copy /b \"dist\\index.html\" /b \"dist\\404.html\">nul && @cls && @echo BUILD COMPLETED"
   },
   "private": true,
   "dependencies": {
