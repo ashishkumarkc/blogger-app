@@ -16,5 +16,5 @@ export const usersRouting = RouterModule.forChild([
 		component: UserFormComponent,
 		canDeactivate: [ PreventUnsavedChangesGuard ]  
 	},
-    { path: 'users', component: UsersComponent },
+	{ path: 'users', component: UsersComponent }
 ]);
